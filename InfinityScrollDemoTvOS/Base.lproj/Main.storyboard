@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13196" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Infinity ScrollingVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="InfinityScrollingVC" customModule="InfinityScrollDemoTvOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xLy-Lq-oZS">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Tr-mo-snp">
+                                <rect key="frame" x="200" y="260" width="1520" height="700"/>
+                                <color key="backgroundColor" red="1" green="0.072220509160000002" blue="0.18051014400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="700" id="5zN-Xt-JUv"/>
+                                    <constraint firstAttribute="leading" secondItem="9Tr-mo-snp" secondAttribute="leading" id="P1X-1s-AiT"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Tr-mo-snp" secondAttribute="trailing" id="pFf-7w-MgH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Tr-mo-snp" firstAttribute="leading" secondItem="xLy-Lq-oZS" secondAttribute="leading" constant="200" id="R8A-Cp-Cyv"/>
+                            <constraint firstItem="9Tr-mo-snp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="V6W-Yd-1o0"/>
+                            <constraint firstAttribute="trailing" secondItem="9Tr-mo-snp" secondAttribute="trailing" constant="200" id="gYc-K9-Iwo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infinityScrollingViewContainer" destination="9Tr-mo-snp" id="ieS-kG-o98"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="KwK-tQ-tU0">
+                    <connections>
+                        <action selector="scroll:" destination="BYZ-38-t0r" id="SWS-Hy-AFc"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-2231" y="117"/>
+        </scene>
+    </scenes>
+</document>
